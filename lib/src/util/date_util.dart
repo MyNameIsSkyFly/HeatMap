@@ -33,6 +33,22 @@ class DateUtil {
     'Dec',
   ];
 
+  static const List<String> CHINA_MONTH_LABEL = [
+    '',
+    '1月',
+    '2月',
+    '3月',
+    '4月',
+    '5月',
+    '6月',
+    '7月',
+    '8月',
+    '9月',
+    '10月',
+    '11月',
+    '12月',
+  ];
+
   static const List<String> WEEK_LABEL = [
     '',
     'Sun',
@@ -42,6 +58,17 @@ class DateUtil {
     'Thu',
     'Fri',
     'Sat',
+  ];
+
+  static const List<String> CHINA_WEEK_LABEL = [
+    '',
+    '周日',
+    '周一',
+    '周二',
+    '周三',
+    '周四',
+    '周五',
+    '周六',
   ];
 
   /// Get start day of month.
