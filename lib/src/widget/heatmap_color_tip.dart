@@ -92,8 +92,12 @@ class HeatMapColorTip extends StatelessWidget {
       height: size ?? 10,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(borderRadius ?? 0),
-        color: color,
+        color: Colors.white,
       ),
+      child: Container(decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(borderRadius ?? 0),
+        color: color,
+      ),),
     );
   }
 

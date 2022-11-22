@@ -32,7 +32,10 @@ class HeatMapContainer extends StatelessWidget {
     return Padding(
       padding: margin ?? const EdgeInsets.all(2),
       child: GestureDetector(
-        child: Container(
+        child: Container(decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.all(Radius.circular(borderRadius ?? 5)),
+        ), child: Container(
           decoration: BoxDecoration(
             color: backgroundColor ?? HeatMapColor.defaultColor,
             borderRadius: BorderRadius.all(Radius.circular(borderRadius ?? 5)),
@@ -45,19 +48,19 @@ class HeatMapContainer extends StatelessWidget {
             alignment: Alignment.center,
             child: (showText ?? true)
                 ? Text(
-                    date.day.toString(),
-                    style: TextStyle(
-                        color: textColor ?? const Color(0xFF8A8A8A),
-                        fontSize: fontSize),
-                  )
+              date.day.toString(),
+              style: TextStyle(
+                  color: textColor ?? const Color(0xFF8A8A8A),
+                  fontSize: fontSize),
+            )
                 : null,
             decoration: BoxDecoration(
               color: selectedColor,
               borderRadius:
-                  BorderRadius.all(Radius.circular(borderRadius ?? 5)),
+              BorderRadius.all(Radius.circular(borderRadius ?? 5)),
             ),
           ),
-        ),
+        ),),
         onTap: () {
           onClick != null ? onClick!(date) : null;
         },
